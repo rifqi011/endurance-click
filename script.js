@@ -97,5 +97,26 @@ timerButton.addEventListener("mouseup", () => {
 	}
 })
 
+/* Fungsi untuk menangani sentuhan di layar HP */
+function handleTouchStart(event) {
+    event.preventDefault();
+    if (!running) {
+        timerButton.querySelector("img").src = "img/buttonclicked.png";
+        startTimer();
+    }
+}
+
+function handleTouchEnd(event) {
+    event.preventDefault();
+    if (running) {
+        timerButton.querySelector("img").src = "img/button.png";
+        stopTimer();
+    }
+}
+
+/* event listener ketika layar HP ditekan */
+timerButton.addEventListener("touchstart", handleTouchStart, { passive: false })
+timerButton.addEventListener("touchend", handleTouchEnd, { passive: false })
+
 /* panggil fungsi ketika halaman dimuat */
 updateBestTimeDisplay()
