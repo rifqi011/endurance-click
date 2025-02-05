@@ -97,6 +97,13 @@ timerButton.addEventListener("mouseup", () => {
 	}
 })
 
+timerButton.addEventListener("mouseleave", () => {
+    if (running) {
+        timerButton.querySelector("img").src = "img/button.png" // Kembalikan gambar
+        stopTimer()
+    }
+})
+
 /* Fungsi untuk menangani sentuhan di layar HP */
 function handleTouchStart(event) {
     event.preventDefault();
