@@ -98,27 +98,27 @@ timerButton.addEventListener("mouseup", () => {
 })
 
 timerButton.addEventListener("mouseleave", () => {
-    if (running) {
-        timerButton.querySelector("img").src = "img/button.png" // Kembalikan gambar
-        stopTimer()
-    }
+	if (running) {
+		timerButton.querySelector("img").src = "img/button.png" // Kembalikan gambar
+		stopTimer()
+	}
 })
 
 /* Fungsi untuk menangani sentuhan di layar HP */
 function handleTouchStart(event) {
-    event.preventDefault();
-    if (!running) {
-        timerButton.querySelector("img").src = "img/buttonclicked.png";
-        startTimer();
-    }
+	event.preventDefault()
+	if (!running) {
+		timerButton.querySelector("img").src = "img/buttonclicked.png"
+		startTimer()
+	}
 }
 
 function handleTouchEnd(event) {
-    event.preventDefault();
-    if (running) {
-        timerButton.querySelector("img").src = "img/button.png";
-        stopTimer();
-    }
+	event.preventDefault()
+	if (running) {
+		timerButton.querySelector("img").src = "img/button.png"
+		stopTimer()
+	}
 }
 
 /* event listener ketika layar HP ditekan */
