@@ -6,10 +6,10 @@
 	--font-family: "Figtree", sans-serif;
 
 	--white: #fff;
-    --blue: #0095f6;
-    --purlple: #6228d7;
-    --gradient: linear-gradient(90deg, rgba(160,44,255,1) 0%, rgba(70,210,255,1) 45%, rgb(3, 216, 153) 100%);
-    /* --gradient: linear-gradient(120deg, rgba(249,206,52,1) 0%, rgba(238,42,123,1) 50%,rgb(98, 40, 215) 100%); */
+	--blue: #0095f6;
+	--purlple: #6228d7;
+	--gradient: linear-gradient(90deg, rgba(160, 44, 255, 1) 0%, rgba(70, 210, 255, 1) 45%, rgb(3, 216, 153) 100%);
+	/* --gradient: linear-gradient(120deg, rgba(249,206,52,1) 0%, rgba(238,42,123,1) 50%,rgb(98, 40, 215) 100%); */
 }
 
 /* Reset */
@@ -94,56 +94,74 @@ body {
 }
 
 .hidden {
-    display: none !important;
+	display: none !important;
 }
 
 /* Particles JS */
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: var(--gradient);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: var(--gradient);
 }
 
 /* Home */
 .home {
-    justify-content: center;
-    align-items: center;
-    height: 100svh;
+	justify-content: center;
+	align-items: start;
+	min-height: 100svh;
+	padding-block: 5%;
+	gap: 2rem;
 }
 
 .content {
-    background-color: var(--purlple);
-    color: var(--white);
-    width: 100%;
-    padding: 1rem;
-    border-radius: 1rem;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 500px;
+	background-color: var(--purlple);
+	color: var(--white);
+	width: 100%;
+	padding: 1rem;
+	border-radius: 1rem;
+	align-items: center;
+	gap: 1.5rem;
+	max-width: 500px;
 }
 
 .timer-container {
-    width: 100%;
-    justify-content: center;
+	width: 100%;
+	justify-content: center;
 }
 
 .timer {
-    font-size: 2.5rem;
-    font-weight: 500;
+	font-size: 2.5rem;
+	font-weight: 500;
 }
 
 .button {
-    padding-block: 1rem;
+	padding-block: 1rem;
 }
 
 .button img {
-    width: 200px;
+	width: 200px;
 }
 
 .instructions {
-    text-align: center;
+	text-align: center;
+}
+
+/* Leaderboard */
+.leaderboard-table {
+	width: 100%;
+	text-align: left;
+	font-size: 16px;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+	font-weight: 300;
+}
+
+.leaderboard-table-col {
+	padding: 0.5rem 0.8rem;
 }
